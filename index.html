@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style-fetch.css">
+    <title>Получение картинок с сервера + плагин анимации</title>
+</head>
+<body>
+<div id="wrap">
+<h1 id="dynamic-text">Получение картинок с сервера (фото очень объёмные)</h1>
+<form action="" class="form-for-pictures" onkeypress="if(event.keyCode == 13) return false;">
+    <input type="text" class="number" placeholder="Введите число от 1 до 6">
+    <input type="button" class="button" value="Получить">
+    <div class="container">
+
+    </div>
+</form>
+</div>
+<div id="effect"></div>
+
+<script src="js/three.min.js"></script>
+<script src="js/effect.js"></script>
+<script src="js/fetch.js"></script>
+</body>
+</html>
