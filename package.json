@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "sync": "browser-sync start --server --files *.*"
+    "serve": "browser-sync start -s \"src\" -f \".\""
   },
   "author": "",
   "license": "ISC",
