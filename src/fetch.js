@@ -5,6 +5,7 @@ let pageNumberEl = document.querySelector('.page-number');
 let pageNumber = 1; //устанавливаю первоначальный номер страницы
 let perPage = 12; //устанавливаю количество фото на одной страницы
 
+
 function getPictures() {
     let first = perPage * pageNumber - 11; //вычисляю первое значение количества фото
     let last = perPage * pageNumber; //вычисляю второе значение количества фото
@@ -55,6 +56,15 @@ function getPictures() {
     }
 }
 
+//навешиваю на input событие change, чтобы обнулять количество страниц при каждом изменении запроса
+inputEl.addEventListener(
+    'change',
+    () => {
+        pageNumber = 1;
+    }
+)
+
+//вызываю функцию получения фото
 btnEl.addEventListener(
     'click',
     getPictures
@@ -77,7 +87,6 @@ nextEl.addEventListener(
     'click',
     function () {
         pageNumber++;
-        console.log(pageNumber);
         getPictures();
     }
 )
@@ -91,7 +100,6 @@ previousEl.addEventListener(
         if (pageNumber <= 0){
             pageNumber = 1;
         }
-        console.log(pageNumber);
         getPictures();
     }
 )
