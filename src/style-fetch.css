@@ -11,6 +11,10 @@ h1{
     padding: 10px 5px;
 }
 
+p{
+    margin: 8px 0;
+}
+
 .form-for-pictures{
     text-align: center;
 }
@@ -42,6 +46,14 @@ h1{
     width: 200px;
     text-align: center;
     font-weight: 600;
+    font-size: 18px;
+    margin-top: 38px;
+}
+
+.created-year{
+    width: 200px;
+    text-align: center;
+    font-weight: 500;
     font-size: 18px;
 }
 

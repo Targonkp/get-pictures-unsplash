@@ -29,11 +29,13 @@ function getPictures() {
                 console.log(data);
                 //создаю и применяю функцию callback к каждому элементу
                 for (let key in data.results){
+                    let description = (data.results[key].alt_description == null) ? 'Without title' : data.results[key].alt_description;
                     let picture = document.createElement('div');
                     picture.className = 'container__element';
                     picture.innerHTML =
                         `
-                        <p class="picture-text">${data.results[key].alt_description}</p>
+                        <p class="picture-text">${description}</p>
+                        <p class="created-year">Created year: ${parseFloat(data.results[key].created_at)}</p>
                         <img src="${data.results[key].urls.raw}&w=400&fit=max" alt="" class="picture-image"></img>
                          `;
                     picture.addEventListener(
